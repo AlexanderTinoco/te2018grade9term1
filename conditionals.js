@@ -7,6 +7,23 @@ const READLINE = require("readline-sync");
 console.log("*** Problem 1: R-rated ***");
 let age = READLINE.question("Enter your age: ");
 let withAdult = READLINE.question("Are you with an adult? (yes or no): ");
+if (age >= 18){
+  console.log('You are allowed to get in')
+  if (age <= 17){
+  let withAdult = READLINE.question("Are you with an adult? (yes or no): ");
+     console.log('You may not enter');
+  }
+//} else if {
+ //if (withAdult == 'yes','yes'
+ //console.log('You may enter')
+
+
+
+}
+
+
+
+
 
 
 // **** Problem 2: Umbrella ****
@@ -17,7 +34,12 @@ let withAdult = READLINE.question("Are you with an adult? (yes or no): ");
 console.log("*** Problem 2: Umbrella ***");
 let raining = READLINE.question("Is it raining? (yes or no): ");
 let thunderstorming = READLINE.question("Is it thunderstorming? (yes or no): ");
+if (raining == 'yes'){
+ console.log('Take out Umbrella')
+if (raining == 'no')
+console.log('Dont take out umbrella')
 
+}
 
 // **** Problem 3: Monkey Trouble ****
 // There are two monkeys: Bubbles and Spankey. You are in trouble if both of
