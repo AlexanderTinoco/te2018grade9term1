@@ -12,13 +12,8 @@ let player = {
 };
 
 console.log();
-
-console.log("*** WELCOME TO DEAD BY DAYLIGHT ***");
-player.name = READLINE.question("What is your name?: ");
-console.log(player.name + " gets on game");
-console.log(player.name + " friends invite you to a game");
-let enterHouse = READLINE.question("Will you accept invite? (yes or no) ");
-if(enterHouse == "y" || enterHouse == "yes") {
+player.name = READLINE.question("Will you accept invite? (yes or no) ");
+if(joinGame == "y" || joinGame == "yes") {
   player.courage++;
   console.log(`${player.name} prepares their ${player.weapon} and enters game...`);
   // continue the story
@@ -28,53 +23,56 @@ if(enterHouse == "y" || enterHouse == "yes") {
      console.log("You realize that the killer saw you running and is chasing you");
      decisionAfter  = READLINE.question("Will you go into open area (1) or lose him in the corn maze (2)?");
      if (decisionAfter == 1) {
-       console.log("The killer corners you and you try to escape,but slashes your back and fall. He picks you up and hooks you up on a meathook");
+       console.log("The killer corners you and you try to escape,but slashes your back and you fall. Then, he picks you up and hooks you up on a meathook");
        console.log();
-       decisionAfter  = READLINE.question("You wait for a teammate to take you of a meathook (1) or wait until it finishes ringing (2)?");
+       decisionAfter  = READLINE.question("You wait for a teammate to take you off the meathook (1) or try to get off the meathook yourself (2)?");
        // more story
      } if (decisionAfter == 2) {
-       console.log("You hear footsteps in another area of the house.");
+       console.log("You get off the meathook, but are hurt badly.");
        console.log();
-       decisionAfter  = READLINE.question("Will you run out of the house (1) or try to find out whose footsteps they are (2)?");
+       decisionAfter  = READLINE.question("Will you look for a teammate to heal you (1) or try to heal yourself (2)?");
        /// more story
      }
-  } if (decisionAfter == 2) {
-     console.log("You stumble across a big mirror but you see everything else but you're reflection in it.");
-     console.log();
-     decisionAfter  = READLINE.question("Will you touch the mirror (1) or break the mirror (2)?");
      if (decisionAfter == 1) {
-       console.log("You hear a TV turn on somewhere in the house");
+       console.log("While you look for a teammate you hear the killer in the corn maze.");
+       console.log();
+       decisionAfter  = READLINE.question("You try to sneak around him (1) or wait for him to leave the area (2)?");
+  } if (decisionAfter == 2) {
+     console.log("The killer leaves and you find a teammate and you both try escape,but the killer gets your teammate down.");
+     console.log();
+     decisionAfter  = READLINE.question("Will you try to save your teammate (1) or leave your teammate behind and escape (2)?");
+     if (decisionAfter == 1) {
+       console.log("You try to save your teammate, but get killed by the killer. ");
        // more story
      } if (decisionAfter == 2) {
-       console.log("You break the mirror with your" + player.weapon + ". When the glass breaks it reveals a hallway.");
+       console.log("You leave your teammate to die and escape." + player.weapon + ". You level up and get a new character.");
        // more story
      }
   }
-} else if (enterHouse == "no" || enterHouse == "n") {
+} else if (joinGame == "no" || joinGame == "n") {
   player.intellect++;
-  console.log(player.name + " decideds not to open the door. However...");
+  console.log(player.name + " decideds not to join the game and creates his own game.");
   // continue the story
-  console.log("You hear your dog yelling for help in the backyard.");
-  decisionAfter  = READLINE.question("Will you go to the backyard (1) or go get your bike to ride home and find help (2)?");
+  console.log("You get to choose your killer.");
+  decisionAfter  = READLINE.question("Will you pick Legion (1) or pick Michael Myers (2)?");
   if (decisionAfter == 1 ) {
-    console.log("There is nothing in the backyard but you found an axe");
-    player.weapon2 = "axe";
-    decisionAfter  = READLINE.question("Will you go into the house through the backdoor (1) or throw a rock at the window (2)?");
+    console.log("You load in and start sneaking around trying to find the survivors. You see someone pop a generator.");
+    decisionAfter  = READLINE.question("Will you go rush towards the area(1) or try to think at were the survivor would go and cut them off. (2)?");
     if (decisonAfter == 1) {
-      console.log("The floor cavs in when you walk through the backdoor and now you're in the basement");
+      console.log("You see someone still working on the generator and kill them with your knife");
       // more story
     } else if (decisionAfter == 2) {
-      console.log("A werewolf emerges from the bushes and starts to chase you");
+      console.log("You find two people running away and slug them both. Then, put them on the meathook.");
       // more story
     }
   } else if (decisionAfter == 2) {
-    console.log("Your bike is broken");
-    decisionAfter = READLINE.question("Will you get an Uber (1) or try to fix your bike (2).");
+    console.log("You look for someone in the dungeon and find someone trying to cleanse your hex.");
+    decisionAfter = READLINE.question("Will you chase them down (1) or try to sneak up on them. (2).");
     if (decisionAfter == 1) {
-      console.log("There are no Ubers in your area.");
+      console.log("He escapes.");
       // more story
     } else if (decisionAfter == 2) {
-      console.log("Now you hear your dog inside the house");
+      console.log("You got him off guard and are able to kill him.");
       // more story
     }
   }
