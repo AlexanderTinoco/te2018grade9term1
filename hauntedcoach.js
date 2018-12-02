@@ -15,7 +15,7 @@ console.log();
 player.name = READLINE.question("Will you accept invite? (yes or no) ");
 if(joinGame == "y" || joinGame == "yes") {
   player.courage++;
-  console.log(`${player.name} prepares their ${player.weapon} and enters game...`);
+  console.log(`${player.name} prepares their ${player.weapon} and enters game...);
   // continue the story
   console.log("You walk around and hear the killer getting closer");
   let decisionAfter  = READLINE.question("Will you run away from the killer (1) or hide from the killer (2)?");
@@ -61,20 +61,20 @@ if(joinGame == "y" || joinGame == "yes") {
     if (decisonAfter == 1) {
       console.log("You see someone still working on the generator and kill them with your knife");
       // more story
-    } else if (decisionAfter == 2) {
+    /} else if (decisionAfter == 2) {
       console.log("You find two people running away and slug them both. Then, put them on the meathook.");
       // more story
     }
   } else if (decisionAfter == 2) {
-    console.log("You look for someone in the dungeon and find someone trying to cleanse your hex.");
-    decisionAfter = READLINE.question("Will you chase them down (1) or try to sneak up on them. (2).");
+    /console.log("You look for someone in the dungeon and find someone trying to cleanse your hex.");
+    /decisionAfter = READLINE.question("Will you chase them down (1) or try to sneak up on them. (2).");
     if (decisionAfter == 1) {
       console.log("He escapes.");
-      // more story
+       //more story
     } else if (decisionAfter == 2) {
       console.log("You got him off guard and are able to kill him.");
       // more story
     }
   }
 }
-console.log("Thanks for playing!");
+//console.log("Thanks for playing!");
