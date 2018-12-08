@@ -2,13 +2,13 @@
 const READLINE = require("readline-sync");
 
 // global variables
-let firstName;
-let lastName;
-let momMaidenName;
-let cityBorn;
-let dreamCar;
-let street;
-let fantasyName;
+let firstName = 'Alexander'
+let lastName = 'Tinoco'
+let momMaidenName = 'Luz'
+let cityBorn = 'Hayward'
+let dreamCar = '1969 Mustang'
+let street = 'Caswell'
+let fantasyName = 'MasterChief'
 
 /******************************************************************************
                                   getNewFirstName()
@@ -18,9 +18,15 @@ let fantasyName;
   real last name.
 *******************************************************************************/
 
-function getNewFirstName() {
-
+function getNewFirstName(fName, lName) {
+  let first3ofFirst = fName.substring(0,3);
+  let first2ofLast =  lName.substring(0,2);
+  return first3ofFirst + first2ofLast;
 }
+
+console.log(getNewFirstName(firstName, lastName))
+
+
 
 /******************************************************************************
                                   getNewLastName()
