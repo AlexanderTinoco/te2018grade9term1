@@ -1,4 +1,5 @@
-// Author: Alexander Tinoco
+
+// Author: FirstName LastName
 
 /******************************************************************************
                                 constant variables
@@ -9,7 +10,7 @@
   tampering!
 *******************************************************************************/
 
-const READLINE = require("READLINE-sync");
+// const READLINE = require("READLINE-sync");
 
 /******************************************************************************
                                 global variables
@@ -28,15 +29,14 @@ const READLINE = require("READLINE-sync");
 *******************************************************************************/
 
 let contacts;
-let Yashua = {name:'Yashua',
-              number: 510 976 0436
-              email:'yashua@csedge.com'}
+// let Yashua = {name:'Yashua',
+//               number: 510 976 0436
+//               email:'yashua@csedge.com'}
+//
+// let Jesus = {name:'Jesus'
+// }
+// }
 
-let Jesus = {name:'Jesus'
-               
-}
-
-              }
 let quit;
 
 /******************************************************************************
@@ -47,8 +47,10 @@ let quit;
 *******************************************************************************/
 
 function printGreeting() {
-
+  console.console.log('Hello User Welcome to Smart Contacts 1.0');
 }
+
+printGreeting();
 
 /******************************************************************************
                                   setupApp()
@@ -59,8 +61,12 @@ function printGreeting() {
 *******************************************************************************/
 
 function setup() {
-
+  contacts = [];
 }
+
+setup();
+
+console.console.log(contacts);
 
 /******************************************************************************
                                 getNameInput()
@@ -72,8 +78,15 @@ function setup() {
 *******************************************************************************/
 
 function getNameInput() {
-
+  let contactName = READLINE.question('Please enter a contact name')
+    while (contactName.length < 1) {
+     contactName = READLINE.question('Please enter valid contact name')
+  }
+  return contactName;
 }
+
+getNameInput();
+console.console.log(getNameInput);
 
 /******************************************************************************
                                 checkNumber()
