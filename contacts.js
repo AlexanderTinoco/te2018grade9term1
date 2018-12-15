@@ -1,4 +1,4 @@
-// Author: FirstName lastName
+// Author: Alexander Tinoco
 
 /******************************************************************************
                                 constant variables
@@ -27,7 +27,16 @@ const READLINE = require("READLINE-sync");
   not (false).
 *******************************************************************************/
 
-let contacts; 
+let contacts;
+let Yashua = {name:'Yashua',
+              number: 510 976 0436
+              email:'yashua@csedge.com'}
+
+let Jesus = {name:'Jesus'
+               
+}
+
+              }
 let quit;
 
 /******************************************************************************
